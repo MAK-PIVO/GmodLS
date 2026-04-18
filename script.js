@@ -7,13 +7,14 @@ function nextSlide() {
     slides[index].classList.add("active");
 }
 
-setInterval(nextSlide, 5000);
+// быстрее переключение
+setInterval(nextSlide, 3000);
 
-// AUDIO CONTROL
+// AUDIO
 let music = document.getElementById("bgmusic");
 let volumeSlider = document.getElementById("volumeSlider");
 
-// начальная громкость
+// стартовая громкость
 music.volume = volumeSlider.value;
 
 // изменение громкости
@@ -21,16 +22,16 @@ volumeSlider.addEventListener("input", function () {
     music.volume = this.value;
 });
 
-// фикс для автоплея (GMod иногда блочит)
+// фикс автоплея
 document.addEventListener("click", () => {
     music.play().catch(() => {});
 }, { once: true });
 
-// GMod hooks
+// GMod hooks (если понадобятся)
 function GameDetails(servername) {
-    document.querySelector("h1")?.innerText = servername;
+    console.log(servername);
 }
 
 function SetStatusChanged(status) {
-    document.getElementById("status")?.innerText = status;
+    console.log(status);
 }
