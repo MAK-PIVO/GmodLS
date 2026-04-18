@@ -7,31 +7,14 @@ function nextSlide() {
     slides[index].classList.add("active");
 }
 
-// быстрее переключение
+// быстрее и плавнее
 setInterval(nextSlide, 3000);
 
-// AUDIO
+// AUDIO (авто)
 let music = document.getElementById("bgmusic");
-let volumeSlider = document.getElementById("volumeSlider");
-
-// стартовая громкость
-music.volume = volumeSlider.value;
-
-// изменение громкости
-volumeSlider.addEventListener("input", function () {
-    music.volume = this.value;
-});
+music.volume = 0.5;
 
 // фикс автоплея
 document.addEventListener("click", () => {
     music.play().catch(() => {});
 }, { once: true });
-
-// GMod hooks (если понадобятся)
-function GameDetails(servername) {
-    console.log(servername);
-}
-
-function SetStatusChanged(status) {
-    console.log(status);
-}
