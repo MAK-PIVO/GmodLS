@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- preload images -->
+    <link rel="preload" as="image" href="loadingimage1.png">
+    <link rel="preload" as="image" href="loadingimage2.png">
+    <link rel="preload" as="image" href="loadingimage3.png">
+    <link rel="preload" as="image" href="loadingimage4.png">
+    <link rel="preload" as="image" href="loadingimage5.png">
+</head>
 <body>
 
 <div id="slideshow">
@@ -14,7 +28,7 @@
     <source src="gachi.wav" type="audio/wav">
 </audio>
 
-<!-- VOLUME CONTROL -->
+<!-- VOLUME -->
 <div id="volumeControl">
     <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
 </div>
@@ -22,3 +36,4 @@
 <script src="script.js"></script>
 
 </body>
+</html>
