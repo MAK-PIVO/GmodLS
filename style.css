@@ -36,3 +36,15 @@ html, body {
 .slide.active {
     opacity: 1;
 }
+audio {
+    display: none;
+}
+
+/* убивает любые контролы браузера */
+::-webkit-media-controls {
+    display: none !important;
+}
+
+::-webkit-media-controls-panel {
+    display: none !important;
+}
