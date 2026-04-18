@@ -1,46 +1,30 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     background: black;
-    font-family: Arial;
-    color: white;
 }
 
 /* SLIDESHOW */
 #slideshow {
     position: fixed;
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    overflow: hidden;
 }
 
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* растягивает без пустот */
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    will-change: opacity;
 }
 
 .slide.active {
     opacity: 1;
-}
-
-/* VOLUME */
-#volumeControl {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 200px;
-}
-
-#volumeSlider {
-    width: 100%;
 }
