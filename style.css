@@ -1,5 +1,8 @@
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    width: 1920px;
+    height: 1080px;
     overflow: hidden;
     background: black;
     font-family: Arial;
@@ -9,8 +12,11 @@ body {
 /* SLIDESHOW */
 #slideshow {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 1920px;
+    height: 1080px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .slide {
@@ -19,21 +25,22 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    will-change: opacity;
 }
 
 .slide.active {
     opacity: 1;
 }
 
-/* OVERLAY */
-#overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background: rgba(0,0,0,0.5);
-    padding: 20px;
-    border-radius: 10px;
+/* VOLUME */
+#volumeControl {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+}
+
+#volumeSlider {
+    width: 100%;
 }
